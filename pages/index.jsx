@@ -14,7 +14,7 @@ class SimpleMap extends Component {
     return (
       <>
         <div style={{ height: "100vh", width: "100%" }}>
-          <h1>LatLngBounds.extend bug repro</h1>
+          <h1>LatLngBounds.getCenter bug repro</h1>
           <p>Open the console. You'll see that:</p>
           <ol>
             <li>
@@ -30,6 +30,9 @@ class SimpleMap extends Component {
           <p>
             This happens any time the google api fails to load for any reason
           </p>
+          <a href="https://github.com/Eguzkiman/google-map-react-bug-repro/blob/main/pages/index.jsx">
+            Source code here
+          </a>
           <GoogleMapReact
             /* We're using a bad key here to make loading the api fail, but the same bug happens when it fails for any other reason */
             bootstrapURLKeys={{ key: "wrong key" }}
