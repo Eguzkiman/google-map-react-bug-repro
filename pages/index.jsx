@@ -36,7 +36,7 @@ class SimpleMap extends Component {
           <GoogleMapReact
             /* We're using a bad key here to make loading the api fail, but the same bug happens when it fails for any other reason */
             bootstrapURLKeys={{ key: "wrong key" }}
-            /* If remove the line above 👆, .extend definition no longer mutates */
+            /* If remove the line above 👆, .getCenter definition no longer mutates */
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
             onGoogleApiLoaded={({ maps }) => {
